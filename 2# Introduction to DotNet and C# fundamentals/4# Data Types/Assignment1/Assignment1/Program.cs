@@ -1,12 +1,21 @@
 ﻿using System;
-
-namespace Assignment1
+public class AreaOfSquare
 {
-    class Program
+    int Side;
+    int Area;
+    public AreaOfSquare(int side, int area)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        this.Area = area;
+        this.Side = side;
+
+    }
+
+    public static void Main()
+    {
+        Console.WriteLine("Enter the Side of Square: ");
+        int Side = Convert.ToInt32(Console.ReadLine());
+        int Area = Side * Side;
+        Console.WriteLine($"Area of Square with side {Side} is {Area}");
+        Console.ReadKey();
     }
 }
